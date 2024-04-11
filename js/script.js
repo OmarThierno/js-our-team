@@ -33,11 +33,20 @@ const teamWork = [
 
 // console.log(teamWork);
 
+const containerElem = document.querySelector('.container');
+console.log(containerElem);
+
 for (let i = 0; i < teamWork.length; i++) {
   const curPersonObj = teamWork[i];
-  // console.log(curPersonObj)
+  // console.log(curPersonObj);
+
+  let myStrin = '';
 
   for (let key in curPersonObj) {
     console.log(key, curPersonObj[key]);
+
+    myStrin += `<div>The ${key} is: ${curPersonObj[key]}</div>`
   }
+
+  containerElem.innerHTML += `<div class="col">${myStrin}</div>`
 }
