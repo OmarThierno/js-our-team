@@ -45,7 +45,11 @@ for (let i = 0; i < teamWork.length; i++) {
   for (let key in curPersonObj) {
     console.log(key, curPersonObj[key]);
 
-    myStrin += `<div>The ${key} is: ${curPersonObj[key]}</div>`
+    if (key === 'photo') {
+      myStrin += `<div><img src="img/${curPersonObj[key]}" alt=""></div>`;
+    } else {
+      myStrin += `<div>The ${key} is: ${curPersonObj[key]}</div>`
+    }
   }
 
   containerElem.innerHTML += `<div class="col">${myStrin}</div>`
