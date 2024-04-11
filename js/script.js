@@ -1,33 +1,33 @@
 const teamWork = [
   {
+    photo: 'wayne-barnett-founder-ceo.jpg',
     name: 'Wayne Barnett',
     role: 'Founder & CEO',
-    photo: 'wayne-barnett-founder-ceo.jpg'
   },
   {
+    photo: 'angela-caroll-chief-editor.jpg',
     name: 'Angela Caroll',
     role: 'Chief Editor',
-    photo: 'angela-caroll-chief-editor.jpg'
   },
   {
+    photo: 'walter-gordon-office-manager.jpg',
     name: 'Walter Gordon',
     role: 'Office Manager',
-    photo: 'walter-gordon-office-manager.jpg'
   },
   {
+    photo: 'angela-lopez-social-media-manager.jpg',
     name: 'Angela Lopez',
     role: 'Social Media Manager',
-    photo: 'angela-lopez-social-media-manager.jpg'
   },
   {
+    photo: 'scott-estrada-developer.jpg',
     name: 'Scott Estrada',
     role: 'Developer',
-    photo: 'scott-estrada-developer.jpg'
   },
   {
+    photo: 'barbara-ramos-graphic-designer.jpg',
     name: 'Barbara Ramos',
     role: 'Graphic Designer',
-    photo: 'barbara-ramos-graphic-designer.jpg'
   },
 ];
 
@@ -47,8 +47,14 @@ for (let i = 0; i < teamWork.length; i++) {
 
     if (key === 'photo') {
       myStrin += `<div><img src="img/${curPersonObj[key]}" alt=""></div>`;
+    } else if (key === 'role') {
+      myStrin += `
+        <div>
+          <i class="fa-brands fa-github"></i>
+          ${curPersonObj[key]}
+        </div>`
     } else {
-      myStrin += `<div>The ${key} is: ${curPersonObj[key]}</div>`
+      myStrin += `<div>${curPersonObj[key]}</div>`
     }
   }
 
