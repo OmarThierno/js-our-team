@@ -31,4 +31,13 @@ const teamWork = [
   },
 ];
 
-console.log(teamWork);
+// console.log(teamWork);
+
+for (let i = 0; i < teamWork.length; i++) {
+  const curPersonObj = teamWork[i];
+  // console.log(curPersonObj)
+
+  for (let key in curPersonObj) {
+    console.log(key, curPersonObj[key]);
+  }
+}
